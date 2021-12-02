@@ -1,23 +1,47 @@
 # Classification_ML_Bank-loan
 Predicting the eligibility of bank customers for a loan
 
-Project: Decision Trees and Random Forest - Predicting Potential Customers
-Marks: 30
-Welcome to the project on classification using decision trees and random forests.
 
-Context
-The EdTech industry has been surging in the past decade immensely, and according to a forecast, the Online Education market would be worth $286.62bn by 2023 with a compound annual growth rate (CAGR) of 10.26% from 2018 to 2023. The modern era of online education has enforced a lot in its growth and expansion beyond any limit. Due to having many dominant features like ease of information sharing, personalized learning experience, transparency of assessment, etc, it is now preferable to traditional education.
+A significant number of hotel bookings are called off due to cancellations or no-shows. The typical reasons for cancellations include change of plans, scheduling conflicts, etc. This is often made easier by the option to do so free of charge or preferably at a low cost which is beneficial to hotel guests but it is a less desirable and possibly revenue-diminishing factor for hotels to deal with. Such losses are particularly high on last-minute cancellations.
+ 
+The new technologies involving online booking channels have dramatically changed customers' booking possibilities and behavior. This adds a further dimension to the challenge of how hotels handle cancellations, which are no longer limited to traditional booking and guest characteristics.
 
-The online education sector has witnessed rapid growth and is attracting a lot of new customers. Due to this rapid growth, many new companies have emerged in this industry. With the availability and ease of use of digital marketing resources, companies can reach out to a wider audience with their offerings. The customers who show interest in these offerings are termed as leads. There are various sources of obtaining leads for Edtech companies, like
+The cancellation of bookings impact a hotel on various fronts:
+    1. Loss of resources (revenue) when the hotel cannot resell the room.
+    2. Additional costs of distribution channels by increasing commissions or paying for publicity to help sell these rooms.
+    3. Lowering prices last minute, so the hotel can resell a room, resulting in reducing the profit margin.\n,
+    4. Human resources to make arrangements for the guests.
 
-The customer interacts with the marketing front on social media or other online platforms.
-The customer browses the website/app and downloads the brochure
-The customer connects through emails for more information.
-The company then nurtures these leads and tries to convert them to paid customers. For this, the representative from the organization connects with the lead on call or through email to share further details.
+ ## Objective
+  
+The increasing number of cancellations calls for a Machine Learning based solution that can help in predicting which booking is likely to be canceled. INN Hotels Group has a chain of hotels in Portugal, they are facing problems with the high number of booking cancellations and have reached out to your firm for data-driven solutions. You as a data scientist have to analyze the data provided to find which factors have a high influence on booking cancellations, build a predictive model that can predict which booking is going to be canceled in advance, and help in formulating profitable policies for cancellations and refunds.
+ 
+ ## Data Description
 
-Objective
-ExtraaLearn is an initial stage startup that offers programs on cutting-edge technologies to students and professionals to help them upskill/reskill. With a large number of leads being generated on a regular basis, one of the issues faced by ExtraaLearn is to identify which of the leads are more likely to convert so that they can allocate resources accordingly. You, as a data scientist at ExtraaLearn, have been provided the leads data to:
+ The data contains the different attributes of customers' booking details. The detailed data dictionary is given below.
 
-Analyze and build an ML model to help identify which leads are more likely to convert to paid customers,
-Find the factors driving the lead conversion process
-Create a profile of the leads which are likely to convert
+ **Data Dictionary**
+
+ * Booking_ID: unique identifier of each booking
+ * no_of_adults: Number of adults
+ * no_of_children: Number of Children
+ * no_of_weekend_nights: Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel
+ * no_of_week_nights: Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel
+ * type_of_meal_plan: Type of meal plan booked by the customer:
+     * Not Selected – No meal plan selected
+     * Meal Plan 1 – Breakfast
+     * Meal Plan 2 – Half board (breakfast and one other meal)
+     * Meal Plan 3 – Full board (breakfast, lunch, and dinner)
+ * required_car_parking_space: Does the customer require a car parking space? (0 - No, 1- Yes)
+ * room_type_reserved: Type of room reserved by the customer. The values are ciphered (encoded) by INN Hotels.
+ * lead_time: Number of days between the date of booking and the arrival date\n",
+ * arrival_year: Year of arrival date
+ * arrival_month: Month of arrival date
+ * arrival_date: Date of the month
+ * market_segment_type: Market segment designation.
+ * repeated_guest: Is the customer a repeated guest? (0 - No, 1- Yes)
+ * no_of_previous_cancellations: Number of previous bookings that were canceled by the customer prior to the current booking
+ * no_of_previous_bookings_not_canceled: Number of previous bookings not canceled by the customer prior to the current booking
+ * avg_price_per_room: Average price per day of the reservation; prices of the rooms are dynamic. (in euros)
+ * no_of_special_requests: Total number of special requests made by the customer (e.g. high floor, view from the room, etc)
+ * booking_status: Flag indicating if the booking was canceled or not.
